@@ -19,14 +19,14 @@ body {
 
 /* Шапка */
 header {
-    background: white;
-    border-bottom: 1px solid #e2e0d4;
+    background: rgba(255, 255, 245, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding: 16px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255, 255, 245, 0.97);
-    backdrop-filter: blur(8px);
+    position: sticky;   /* ← главное свойство */
+    top: 0;             /* ← прилипает к верху */
+    z-index: 1000;      
+    width: 100%;
 }
 
 header .container {
