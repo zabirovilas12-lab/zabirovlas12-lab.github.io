@@ -1019,3 +1019,20 @@ footer {
         text-align: center;
     }
 }
+/* Принудительное закрепление шапки */
+header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background: rgba(255, 255, 245, 0.98) !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
