@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Копка и чистка колодцев | Профессионально</title>
+    <link rel="stylesheet" href="дизайн.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">💧 КолодецМастер</div>
+            <nav>
+                <a href="#services">Услуги</a>
+                <a href="#gallery">Наши работы</a>
+                <a href="#prices">Цены</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <div class="phone">📞 +7 (904) 854-32-90</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Копка и чистка колодцев <br>в [Ваш город/район]</h1>
+            <p>Профессионально, с гарантией, без грязи на участке</p>
+            <button class="btn" onclick="callNow()">📞 Заказать звонок</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⛏️</div>
+                    <h3>Копка колодцев</h3>
+                    <p>От 2 до 15 колец. Учитываем уровень грунтовых вод. Работаем вручную и с техникой.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Чистка колодцев</h3>
+                    <p>Удаление ила, дезинфекция, восстановление дебита. Вода снова кристально чистая.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Ремонт и герметизация</h3>
+                    <p>Заделка швов, замена колец, насосное оборудование. Устраняем протечки.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+           <section id="gallery">
+        <div class="container">
+            <h2>Примеры работ</h2>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 600px; margin: 0 auto;">
+                <div class="gallery-item" style="width: 180px; height: 180px; margin: 0 auto;">
+                    <div class="before-after">
+                        <span class="badge">До</span>
+                        <img src="do.jpg" alt="До чистки" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+                    </div>
+                </div>
+                <div class="gallery-item" style="width: 180px; height: 180px; margin: 0 auto;">
+                    <div class="before-after">
+                        <span class="badge after">После</span>
+                        <img src="posle.jpg" alt="После чистки" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+                    </div>
+                </div>
+                <div class="gallery-item" style="width: 180px; height: 180px; margin: 0 auto;">
+                    <img src="nj.jpg" alt="Новый колодец" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+                </div>
+            </div>
+            <p class="gallery-note" style="text-align: center; margin-top: 20px;">z</p>
+        </div>
+    </section>
+        <section id="reviews">
+        <div class="container">
+            <h2>Отзывы наших клиентов</h2>
+            
+            <!-- Список отзывов -->
+            <div class="reviews-grid" id="reviewsList">
+                <!-- Примеры отзывов (можно удалить или оставить) -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">👨</div>
+                        <div class="review-info">
+                            <h4>Иван Петров</h4>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">Заказывал чистку колодца на даче. Вода была мутная с запахом. Ребята приехали быстро, за день всё сделали. Вода стала чистая и прозрачная. Спасибо!</p>
+                    <span class="review-date">15 марта 2025</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">👩</div>
+                        <div class="review-info">
+                            <h4>Елена Смирнова</h4>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">Копали новый колодец. Всё сделали качественно, без грязи на участке. Цена договорная, никаких доплат не было. Рекомендую!</p>
+                    <span class="review-date">2 февраля 2025</span>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">👴</div>
+                        <div class="review-info">
+                            <h4>Сергей Михайлович</h4>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text">Чистили колодец после зимы. Работали аккуратно, всё объяснили. Теперь знаю, что раз в 2-3 года нужно чистить. Доволен.</p>
+                    <span class="review-date">10 января 2025</span>
+                </div>
+            </div>
+            
+            <!-- Форма добавления отзыва -->
+            <div class="review-form-container">
+                <h3>Оставить свой отзыв</h3>
+                <form id="reviewForm">
+                    <div class="form-row">
+                        <input type="text" id="reviewName" placeholder="Ваше имя" required>
+                        <select id="reviewRating" required>
+                            <option value="5">★★★★★ (5)</option>
+                            <option value="4">★★★★☆ (4)</option>
+                            <option value="3">★★★☆☆ (3)</option>
+                            <option value="2">★★☆☆☆ (2)</option>
+                            <option value="1">★☆☆☆☆ (1)</option>
+                        </select>
+                    </div>
+                    <textarea id="reviewText" rows="4" placeholder="Ваш отзыв..." required></textarea>
+                    <button type="submit" class="btn submit-review-btn">📝 Отправить отзыв</button>
+                </form>
+                <p class="review-note">※ Все отзывы проходят модерацию перед публикацией</p>
+            </div>
+        </div>
+    </section>
+     <section id="area">
+        <div class="container">
+            <h2>Где мы работаем</h2>
+            <div class="area-grid">
+                <div class="area-card">
+                    <div class="area-icon">🏙️</div>
+                    <h3>[Район 1]</h3>
+                    <p>Центр района</p>
+                    <span class="area-badge">Выезд 0 ₽</span>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🏘️</div>
+                    <h3>[Район 2]</h3>
+                    <p>Всё направление</p>
+                    <span class="area-badge">Выезд 0 ₽</span>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🌳</div>
+                    <h3>[Район 3]</h3>
+                    <p>Дачные участки</p>
+                    <span class="area-badge">Выезд 0 ₽</span>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🚗</div>
+                    <h3>[Соседний город]</h3>
+                    <p>Пригород и область</p>
+                    <span class="area-badge distance">Выезд +500 ₽</span>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">🚙</div>
+                    <h3>[Дальний район]</h3>
+                    <p>По договорённости</p>
+                    <span class="area-badge distance">Выезд +1000 ₽</span>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">📍</div>
+                    <h3>Другие районы</h3>
+                    <p>Уточняйте по телефону</p>
+                    <span class="area-badge">Звоните!</span>
+                </div>
+            </div>
+        </div>
+              <div class="map-container">
+            <h3 class="map-title">Наша зона обслуживания</h3>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?ll=37.2639,55.6789&z=11&pt=37.2639,55.6789,pm2rdm"
+                    width="100%" 
+                    height="350" 
+                    frameborder="0"
+                    style="border-radius:20px;">
+                </iframe>
+            </div>
+            <p class="map-note">📍 Работаем в Одинцово, Одинцовском районе и ближайших населённых пунктах</p>
+        </div>
+    </section>
+    <section id="prices">
+        <div class="container">
+            <h2>Цены</h2>
+            <div class="price-list">
+                <div class="price-item">Копка 1 кольца <span>от 3 500 ₽</span></div>
+                <div class="price-item">Чистка колодца <span>от 4 000 ₽</span></div>
+                <div class="price-item">Герметизация швов <span>от 1 500 ₽/кольцо</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contacts-grid">
+                <div>
+                    <p><strong>📞 Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+                    <p><strong>✉️ Email:</strong> info@kolodec.ru</p>
+                    <p><strong>🕐 Режим работы:</strong> Ежедневно, 8:00–20:00</p>
+                    <p><strong>📍 Район работы:</strong> [Ваш город/район]</p>
+                    <button class="btn" onclick="location.href='tel:+7XXXXXXXXXX'">📞 Позвонить сейчас</button>
+                  <button class="btn max-btn" onclick="window.open('https://max.ru/u/РАШИД', '_blank')">💬 Написать в MAX</button>
+                </div>
+                <div class="info-card">
+                    <h4>Работаем честно</h4>
+                    <p>✓ Выезд на оценку — бесплатно</p>
+                    <p>✓ Фиксированная цена в договоре</p>
+                    <p>✓ Гарантия на все работы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 КолодецМастер. Копка и чистка колодцев в [Ваш город/район]</p>
+        </div>
+    </footer>
+
+    <script>
+        function callNow() {
+            alert('Спасибо за заявку! Мы перезвоним вам в течение 15 минут.');
+            // Замените на реальный номер:
+            // window.location.href = 'tel:+79048543290';
+        }
+    </script>
+        <script>
+        // Загрузка отзывов из localStorage при открытии страницы
+        function loadReviews() {
+            const savedReviews = localStorage.getItem('userReviews');
+            if (savedReviews) {
+                const reviews = JSON.parse(savedReviews);
+                const reviewsGrid = document.getElementById('reviewsList');
+                // Добавляем пользовательские отзывы в начало списка
+                reviews.forEach(review => {
+                    const reviewCard = createReviewCard(review.name, review.rating, review.text, review.date);
+                    reviewsGrid.insertBefore(reviewCard, reviewsGrid.firstChild);
+                });
+            }
+        }
+        
+        // Создание карточки отзыва
+        function createReviewCard(name, rating, text, date) {
+            const avatars = ['👨', '👩', '👴', '👵', '🧑', '👨‍🦱', '👩‍🦰'];
+            const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
+            const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+            
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML = `
+                <div class="review-header">
+                    <div class="review-avatar">${randomAvatar}</div>
+                    <div class="review-info">
+                        <h4>${escapeHtml(name)}</h4>
+                        <div class="review-rating">${stars}</div>
+                    </div>
+                </div>
+                <p class="review-text">${escapeHtml(text)}</p>
+                <span class="review-date">${date}</span>
+            `;
+            return card;
+        }
+        
+        // Защита от XSS
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+        
+        // Обработка отправки отзыва
+        const reviewForm = document.getElementById('reviewForm');
+        if (reviewForm) {
+            reviewForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('reviewName').value.trim();
+                const rating = parseInt(document.getElementById('reviewRating').value);
+                const text = document.getElementById('reviewText').value.trim();
+                
+                if (!name || !text) {
+                    alert('Пожалуйста, заполните имя и текст отзыва');
+                    return;
+                }
+                
+                const today = new Date();
+                const date = `${today.getDate()} ${today.toLocaleString('ru', {month: 'long'})} ${today.getFullYear()}`;
+                
+                // Создаём новый отзыв
+                const newReview = { name, rating, text, date };
+                
+                // Сохраняем в localStorage
+                let savedReviews = localStorage.getItem('userReviews');
+                let reviews = savedReviews ? JSON.parse(savedReviews) : [];
+                reviews.unshift(newReview); // Добавляем в начало
+                localStorage.setItem('userReviews', JSON.stringify(reviews));
+                
+                // Добавляем на страницу
+                const reviewsGrid = document.getElementById('reviewsList');
+                const reviewCard = createReviewCard(name, rating, text, date);
+                reviewsGrid.insertBefore(reviewCard, reviewsGrid.firstChild);
+                
+                // Очищаем форму
+                reviewForm.reset();
+                document.getElementById('reviewRating').value = '5';
+                
+                alert('Спасибо за отзыв! Он появится на сайте после модерации.');
+            });
+        }
+        
+        // Загружаем отзывы при открытии
+        loadReviews();
+    </script>
+</body>
+</html>
